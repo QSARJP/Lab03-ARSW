@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 @Service("grammarChecker")
 public class GrammarChecker {
     
-        @Autowired
-        @Qualifier("englishSC")
+    @Autowired
+    @Qualifier("spanishSC")
 	SpellChecker sc;
 
 	String x;
