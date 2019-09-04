@@ -30,7 +30,10 @@ Componentes:
 
 2.Make a program in which you create (through Spring) an instance of BlueprintServices, and rectify its functionality: register plans, consult plans, register specific plans, etc.
 
+![](img/main.JPG)
+
 3. Filtros:
+
 ![](img/interfazFiltros.JPG)
 
 (A) Redundancy filtering: deletes consecutive points from the plane that are repeated.
