@@ -24,7 +24,9 @@ Componentes:
 
 # Part II - Blueprint Management 1
 
-1.Add the dependencies of Spring. Add the Spring settings. Configure the application - by means of annotations - so that the persistence scheme is injected when the BlueprintServices bean is created. Complete the getBluePrint() and getBlueprintsByAuthor() operations. Implement everything required from the lower layers (for now, the available persistence scheme InMemoryBlueprintPersistence) by adding the corresponding tests in InMemoryPersistenceTest
+1. Implmentacion de las operaciones getBluePrint() y getBlueprintsByAuthor() 
+
+![](img/author.JPG)
 
 2.Make a program in which you create (through Spring) an instance of BlueprintServices, and rectify its functionality: register plans, consult plans, register specific plans, etc.
 
