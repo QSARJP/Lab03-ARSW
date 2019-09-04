@@ -41,3 +41,9 @@ Componentes:
 
 ![](img/SubsamplinFilter.JPG)
 
+4.Con el fin de realizar las pruebas que se cumplan para cada tipo de filtro. Ser realizan de la siguiente forma
+
+![](img/PruebasBluePrint.PNG)
+
+Como se puede ver en la imagen solamente se debe cambiar el nombre del filtro que se quiere en la la clase de servicio con el fin de obtener diferentes resultados
+
