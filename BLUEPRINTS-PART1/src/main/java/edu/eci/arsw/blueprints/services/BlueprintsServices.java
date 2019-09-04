@@ -32,9 +32,9 @@ public class BlueprintsServices {
     @Qualifier("inMemoryBlueprintPersistence")
     BlueprintsPersistence bpp = null;
 
-
+    //otro servicio = redundancyFiltering
     @Autowired
-    @Qualifier("redundancyFiltering")
+    @Qualifier("subsamplingFiltering")
     Filter ft;
 
     Set<Blueprint> blueprints = new HashSet<>();
