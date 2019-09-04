@@ -1,5 +1,6 @@
 package edu.eci.arsw.blueprints.filters;
 
+import java.awt.SystemColor;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -14,24 +15,33 @@ import edu.eci.arsw.blueprints.model.Point;
 public class RedundancyFiltering implements Filter {
 
 	@Override
-	public Set<Blueprint> filter(Set<Blueprint> setBlue) {
-        List<Integer> pointsIn = new ArrayList<>();
-        Set<Blueprint> blue = new HashSet<>();
-		for ( Blueprint e : setBlue) {
-            List<Point> points = e.getPoints();
-            Point[] ptsNuevos = new Point[points.size()];
-            int i = 0 ;
-            for ( Point p : points){
-                if (!pointsIn.contains(p.getX()) && !pointsIn.contains(p.getY())){
-                    pointsIn.add(p.getX());
-                    pointsIn.add(p.getY());
-                    ptsNuevos[i] = new Point(p.getX(),p.getY());
-                    i++;
-                } 
-            }
-            blue.add(new Blueprint(e.getAuthor(),e.getName(),ptsNuevos));
-
+	public Blueprint filter(Blueprint setBlue) {
+        List<String> pointsIn = new ArrayList<>();
+        Blueprint blue = null;
+        List<Point> points = setBlue.getPoints();
+        Point[] ptsNuevos = new Point[points.size()];
+        int i = 0 ;
+        for ( Point p : points){
+            if (!(pointsIn.contains(p.getX()+" "+p.getY()))){
+                pointsIn.add(p.getX()+ " "+p.getY());
+                ptsNuevos[i] = new Point(p.getX(),p.getY());
+                i++;
+            } 
         }
+        
+        Point[] ptsNuevos2 = new Point[i];
+        for (int j = 0 ; j < i ; j++){
+            ptsNuevos2[j] = ptsNuevos[j];
+        }
+        
+        blue = new Blueprint(setBlue.getAuthor(),setBlue.getName(),ptsNuevos2);
+        /*System.out.println(blue.getPoints().size());
+        System.out.println(blue.getPoints().get(0).getX() + " " + blue.getPoints().get(0).getY() );
+        System.out.println(blue.getPoints().get(1).getX() + " " + blue.getPoints().get(1).getY() );
+        System.out.println(blue.getPoints().get(2).getX() + " " + blue.getPoints().get(2).getY() );
+        System.out.println(blue.getPoints().get(3).getX() + " " + blue.getPoints().get(3).getY() );
+        */
+    
         return blue;
 	}
 

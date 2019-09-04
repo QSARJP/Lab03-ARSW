@@ -1,6 +1,5 @@
 package edu.eci.arsw.blueprints.filters;
 
-import java.util.Set;
 
 import org.springframework.stereotype.Component;
 
@@ -11,7 +10,7 @@ import edu.eci.arsw.blueprints.model.Blueprint;
 public class SubsamplingFiltering implements Filter {
 
 	@Override
-	public Set<Blueprint> filter(Set<Blueprint> setBlue) {
+	public Blueprint filter(Blueprint setBlue) {
 		return null;
 	}
 

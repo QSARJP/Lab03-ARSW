@@ -23,7 +23,7 @@ public class Main {
 
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         BlueprintsServices gc = ac.getBean(BlueprintsServices.class);
-        Point[] pts0=new Point[]{new Point(40, 40),new Point(15, 15),new Point(15,15)};
+        Point[] pts0=new Point[]{new Point(40, 40),new Point(15, 15),new Point(15,15),new Point(16,15),new Point(40,15)};
         Blueprint bp0=new Blueprint("mack", "mypaint",pts0);
         
         gc.addNewBlueprint(bp0);
@@ -33,8 +33,9 @@ public class Main {
         
         gc.addNewBlueprint(bp);
 
-        System.out.println(gc.getBlueprint("mack","mypaint" ));
-        System.out.println(gc.getAllBlueprints());
+        System.out.println(gc.getBlueprint("mack","mypaint").getPoints().size());
+        //System.out.println(gc.getAllBlueprints());
+        //System.out.println(gc.getBlueprint("mack","mypaint").getPoints().size());
     }
 
 }

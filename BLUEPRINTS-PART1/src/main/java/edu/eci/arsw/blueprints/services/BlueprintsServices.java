@@ -50,7 +50,7 @@ public class BlueprintsServices {
     }
     
     public Set<Blueprint> getAllBlueprints(){
-        return ft.filter(blueprints);
+        return blueprints;
     }
     
     /**
@@ -62,7 +62,7 @@ public class BlueprintsServices {
      */
     public Blueprint getBlueprint(String author,String name) throws BlueprintNotFoundException{
         
-        return  bpp.getBlueprint(author,name);
+        return  ft.filter(bpp.getBlueprint(author,name));
          
     }
     
