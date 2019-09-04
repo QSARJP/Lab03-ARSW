@@ -22,5 +22,20 @@ Componentes:
 
 ![](img/SpanishChecker.JPG)
 
+# Part II - Blueprint Management 1
 
+1.Add the dependencies of Spring. Add the Spring settings. Configure the application - by means of annotations - so that the persistence scheme is injected when the BlueprintServices bean is created. Complete the getBluePrint() and getBlueprintsByAuthor() operations. Implement everything required from the lower layers (for now, the available persistence scheme InMemoryBlueprintPersistence) by adding the corresponding tests in InMemoryPersistenceTest
+
+2.Make a program in which you create (through Spring) an instance of BlueprintServices, and rectify its functionality: register plans, consult plans, register specific plans, etc.
+
+3. Filtros:
+![](img/interfazFiltros.JPG)
+
+(A) Redundancy filtering: deletes consecutive points from the plane that are repeated.
+
+![](img/RedundanceFilter.JPG)
+
+(B) Subsampling filtering: suppresses 1 out of every 2 points in the plane, interspersed. 
+
+![](img/SubsamplinFilter.JPG)
 
